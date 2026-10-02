@@ -35,6 +35,19 @@
     imageBox.insertBefore(badge,imageBox.firstChild);
   });
 
+  function linkProductTitles(selector){
+    document.querySelectorAll(selector).forEach(function(title){
+      var product=(window.USHA_PRODUCTS||[]).filter(function(item){return item.name===title.textContent.trim()})[0];
+      if(!product)return;
+      var link=document.createElement('a');
+      link.href='product.html?item='+encodeURIComponent(product.slug);
+      link.textContent=product.name;
+      title.replaceChildren(link);
+    });
+  }
+  linkProductTitles('#cards .collection-copy h3');
+  linkProductTitles('#rail .ginfo h3');
+
   // Keep the call-to-action and opening-hours ticker before FAQ and testimonials.
   var pageMain=document.querySelector('main');
   var finalCta=document.querySelector('.fcta');
@@ -166,4 +179,5 @@
       .catch(function(){status.textContent='We could not submit your review. Please try again.'})
       .finally(function(){submitButton.disabled=false});
   });
+
 })();
