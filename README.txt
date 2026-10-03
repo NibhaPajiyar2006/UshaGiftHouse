@@ -11,7 +11,7 @@ FILES
 
 EDIT CHECKLIST
   1. js/main.js      -> WA_NUMBER, WA_TEXT
-  2. index.html      -> search "98765" and replace phone; "ushagifthouse.com" for email;
+  2. index.html      -> search "98765" and replace phone; update the contact email;
                         "Shop No. 12" for the address
   3. Product cards   -> each <article class="gcard"> in the #rail section: name, description, price
   4. Reviews / FAQ / stats (5k+, 35+, 100%) are sample text - replace with real ones

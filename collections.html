@@ -80,7 +80,7 @@
     }
     var image=document.createElement('img');
     image.src='images/'+product.image;
-    image.alt=product.name+' — '+product.summary;
+    image.alt=product.name+' — '+product.includes;
     image.loading='lazy';
     imageBox.appendChild(image);
     var info=document.createElement('div');
@@ -91,15 +91,18 @@
     titleLink.href='product.html?item='+encodeURIComponent(product.slug);
     titleLink.textContent=product.name;
     title.appendChild(titleLink);
-    var description=document.createElement('p');
-    description.textContent=product.summary;
+    var includes=document.createElement('p');
+    includes.className='includes';
+    var includesLabel=document.createElement('b');
+    includesLabel.textContent='In the set: ';
+    includes.append(includesLabel,document.createTextNode(product.includes));
     var price=document.createElement('div');
     price.className='gprice';
     price.textContent='₹ '+product.price.toLocaleString('en-IN')+'  ';
     var oldPrice=document.createElement('s');
     oldPrice.textContent='₹ '+product.originalPrice.toLocaleString('en-IN');
     price.appendChild(oldPrice);
-    details.append(title,description,price);
+    details.append(title,includes,price);
     var order=document.createElement('a');
     order.className='btn btn-dark catalog-order';
     order.textContent='Enquire';

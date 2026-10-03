@@ -10,13 +10,13 @@
   document.querySelectorAll('[data-wa-item]').forEach(function(a){a.href=waUrl('Hello Usha Gift House, I am interested in: '+a.dataset.waItem);a.target='_blank';a.rel='noopener'});
 
   var featuredBadges={
-    'Peacock Lotus Cover':'Bestseller',
-    'Blue Palace Satin Hamper':'Premium',
-    'Peacock Palace Set':'Luxury',
-    'Palace Trunk Lid':'Top Pick',
-    'Rose Lily Dry Fruit Box':'Bestseller',
-    'Rose Lily Carry Box':'Luxury',
-    'Rose Lily Box with Lid':'Bestseller'
+    'The Peacock Royale':'Bestseller',
+    'The Royal Blue Treasure':'Premium',
+    'The Azure Luxe Hamper':'Luxury',
+    'The Peacock Garden':'Top Pick',
+    'The Twin Peacock Elegance':'Bestseller',
+    'The Lotus Elephant Keepsake':'Luxury',
+    'The Peacock Empress':'Bestseller'
   };
   document.querySelectorAll('#cards .collection-product').forEach(function(card){
     var title=card.querySelector('h3');
